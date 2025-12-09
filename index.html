@@ -441,9 +441,9 @@
       /* Estilos del botón de compartir - 3D Redesign */
       /* Estilos del botón de compartir - Golden 3D Premium */
       #shareBtn {
-        /* Permanent Green 3D Style */
-        background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
-        color: #ffffff;
+        /* Base Gold Gradient */
+        background: linear-gradient(180deg, #FFD700 0%, #FDB931 50%, #DAA520 100%);
+        color: #3E2723; /* Dark brown text */
         border: none;
         padding: 18px 50px;
         font-size: 18px;
@@ -453,18 +453,28 @@
         gap: 12px;
         border-radius: 50px;
         cursor: pointer;
-        /* Green 3D Block Shadow + Drop Shadow */
+        /* 3D Block Shadow + Drop Shadow */
         box-shadow: 
-          0 6px 0 #15803d, 
-          0 12px 20px rgba(22, 163, 74, 0.4),
+          0 6px 0 #B8860B, 
+          0 12px 20px rgba(0, 0, 0, 0.3),
           inset 0 2px 0 rgba(255, 255, 255, 0.5);
         transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         text-transform: uppercase;
         letter-spacing: 1px;
-        /* Dark Green Text Shadow */
-        text-shadow: 0 2px 0 #14532d;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
         position: relative;
         overflow: hidden;
+      }
+      
+      /* New Success State Class */
+      #shareBtn.shared-success {
+        background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+        color: #ffffff;
+        box-shadow: 
+          0 6px 0 #15803d, 
+          0 12px 20px rgba(22, 163, 74, 0.4),
+          inset 0 2px 0 rgba(255, 255, 255, 0.5);
+        text-shadow: 0 2px 0 #14532d;
       }
 
       /* Shine effect overlay */
@@ -486,9 +496,19 @@
       }
 
       #shareBtn:hover {
-        /* Slightly Brighter Green on Hover */
+        /* Radiant Gold on Hover */
+        background: linear-gradient(180deg, #FFF8DC 0%, #FFD700 50%, #FFC107 100%);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 
+          0 10px 0 #B8860B, 
+          0 20px 40px rgba(255, 215, 0, 0.4), /* Golden Glow */
+          inset 0 2px 0 rgba(255, 255, 255, 0.8);
+        color: #251605;
+      }
+      
+      /* Maintain Green on Hover if Success */
+      #shareBtn.shared-success:hover {
         background: linear-gradient(180deg, #86efac 0%, #4ade80 50%, #22c55e 100%);
-        transform: translateY(-2px) scale(1.02);
         box-shadow: 
           0 8px 0 #15803d, 
           0 20px 40px rgba(22, 163, 74, 0.6),
@@ -1135,18 +1155,17 @@ https://github.com/Vecy-Bienes-Raices/Apto-San-Patricio-Bogota`;
             // Muestra el mensaje de éxito
             copyMessage.style.opacity = "1";
 
-            // Cambia el texto y estilo del botón
-            shareBtn.textContent = "✅ ¡Copiado!";
-            shareBtn.style.background =
-              "linear-gradient(135deg, #059669 0%, #047857 100%)";
+            // Cambia el texto y estilo del botón (Permanent Green)
+            shareBtn.innerHTML = `✅ <span>¡ENLACE COPIADO!</span>`;
+            shareBtn.classList.add("shared-success");
+            
+            // Remove inline style override to let class take effect if needed, 
+            // but class has higher specificity usually. 
+            // Actually, previous code set inline style. Let's remove it to be clean.
+            shareBtn.style.background = ""; 
 
-            // Restaura el estado del botón y el mensaje después de 3 segundos
-            setTimeout(() => {
-              copyMessage.style.opacity = "0";
-              shareBtn.innerHTML = "📤 Compartir";
-              shareBtn.style.background =
-                "linear-gradient(135deg, #10B981 0%, #059669 100%)";
-            }, 3000);
+            // NO restauramos el estado. El usuario quiere que se quede verde.
+            // setTimeout removed.
           } catch (err) {
             alert("Error al copiar. Por favor, copia manualmente el texto.");
           }
