@@ -441,9 +441,9 @@
       /* Estilos del botón de compartir - 3D Redesign */
       /* Estilos del botón de compartir - Golden 3D Premium */
       #shareBtn {
-        /* Base Gold Gradient */
-        background: linear-gradient(180deg, #FFD700 0%, #FDB931 50%, #DAA520 100%);
-        color: #3E2723; /* Dark brown text */
+        /* Permanent Green 3D Style */
+        background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+        color: #ffffff;
         border: none;
         padding: 18px 50px;
         font-size: 18px;
@@ -453,15 +453,16 @@
         gap: 12px;
         border-radius: 50px;
         cursor: pointer;
-        /* 3D Block Shadow + Drop Shadow */
+        /* Green 3D Block Shadow + Drop Shadow */
         box-shadow: 
-          0 6px 0 #B8860B, 
-          0 12px 20px rgba(0, 0, 0, 0.3),
+          0 6px 0 #15803d, 
+          0 12px 20px rgba(22, 163, 74, 0.4),
           inset 0 2px 0 rgba(255, 255, 255, 0.5);
         transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         text-transform: uppercase;
         letter-spacing: 1px;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+        /* Dark Green Text Shadow */
+        text-shadow: 0 2px 0 #14532d;
         position: relative;
         overflow: hidden;
       }
@@ -485,12 +486,12 @@
       }
 
       #shareBtn:hover {
-        /* Green on Hover */
-        background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
-        transform: translateY(-4px) scale(1.02);
+        /* Slightly Brighter Green on Hover */
+        background: linear-gradient(180deg, #86efac 0%, #4ade80 50%, #22c55e 100%);
+        transform: translateY(-2px) scale(1.02);
         box-shadow: 
-          0 10px 0 #15803d, 
-          0 20px 40px rgba(22, 163, 74, 0.4), /* Green Glow */
+          0 8px 0 #15803d, 
+          0 20px 40px rgba(22, 163, 74, 0.6),
           inset 0 2px 0 rgba(255, 255, 255, 0.8);
         color: #ffffff;
       }
