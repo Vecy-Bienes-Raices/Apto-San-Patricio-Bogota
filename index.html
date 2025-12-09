@@ -485,14 +485,14 @@
       }
 
       #shareBtn:hover {
-        /* Super Bright Gold on Hover */
-        background: linear-gradient(180deg, #FFF8DC 0%, #FFD700 50%, #FFC107 100%);
+        /* Green on Hover */
+        background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
         transform: translateY(-4px) scale(1.02);
         box-shadow: 
-          0 10px 0 #B8860B, 
-          0 20px 40px rgba(255, 215, 0, 0.4), /* Golden Glow */
+          0 10px 0 #15803d, 
+          0 20px 40px rgba(22, 163, 74, 0.4), /* Green Glow */
           inset 0 2px 0 rgba(255, 255, 255, 0.8);
-        color: #251605;
+        color: #ffffff;
       }
 
       #shareBtn:hover::after {
@@ -502,16 +502,17 @@
       #shareBtn:active {
         transform: translateY(4px);
         box-shadow: 
-          0 2px 0 #B8860B, 
+          0 2px 0 #15803d, 
           0 4px 10px rgba(0, 0, 0, 0.2);
       }
       #copyMessage {
-        color: #d4af37;
-        font-weight: 600;
+        color: #22c55e;
+        font-weight: 700;
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 16px;
         opacity: 0;
         transition: opacity 0.3s;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
       }
 
       @media (max-width: 600px) {
