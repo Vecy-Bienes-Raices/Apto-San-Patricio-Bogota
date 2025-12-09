@@ -451,8 +451,13 @@
         display: inline-flex;
         align-items: center;
         gap: 12px;
+        gap: 12px;
         border-radius: 50px;
         cursor: pointer;
+        /* Width Stability */
+        min-width: 280px; 
+        justify-content: center;
+        text-align: center;
         /* 3D Block Shadow + Drop Shadow */
         box-shadow: 
           0 6px 0 #B8860B, 
@@ -526,15 +531,7 @@
           0 2px 0 #15803d, 
           0 4px 10px rgba(0, 0, 0, 0.2);
       }
-      #copyMessage {
-        color: #15803d;
-        font-weight: 700;
-        margin-top: 10px;
-        font-size: 16px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-      }
+        /* #copyMessage removed as requested */
 
       @media (max-width: 600px) {
         body {
@@ -822,8 +819,7 @@
 
     <div class="glass-card" style="text-align: center">
       <h3 style="margin-bottom: 15px">📤 Compartir Ficha Técnica</h3>
-      <button id="shareBtn">📤 Compartir</button>
-      <p id="copyMessage">✅ ¡Copiado al portapapeles!</p>
+      <button id="shareBtn">📤 COMPARTIR FICHA</button>
     </div>
     <div class="footer">
       <p>¿Buscas conexión con la naturaleza y excelentes amenidades?</p>
@@ -1123,7 +1119,7 @@
         // --- LÓGICA DEL BOTÓN DE COMPARTIR (Integrada) ---
 
         const shareBtn = document.getElementById("shareBtn");
-        const copyMessage = document.getElementById("copyMessage");
+        // const copyMessage removed
 
         shareBtn.addEventListener("click", async function () {
           // Texto de compartir para el nuevo apartamento
@@ -1152,8 +1148,8 @@ https://github.com/Vecy-Bienes-Raices/Apto-San-Patricio-Bogota`;
           try {
             await navigator.clipboard.writeText(shareText);
 
-            // Muestra el mensaje de éxito
-            copyMessage.style.opacity = "1";
+            // Muestra el mensaje de éxito (Removed redundant message below button)
+            // copyMessage.style.opacity = "1";
 
             // Cambia el texto y estilo del botón (Permanent Green)
             shareBtn.innerHTML = `✅ <span>¡ENLACE COPIADO!</span>`;
