@@ -8,6 +8,7 @@ const propertyConfig = {
     title: "Venta Apartamento en San Patricio Bogotá - 243m²",
     description: "Venta Apartamento San Patricio Bogotá - $2.000 Millones - 243m² - 5 Habitaciones - 5 Baños - 3 Garajes - Estrato 6. ¡Elegancia y Exclusividad!",
     keywords: "Venta Apartamento San Patricio, Vecy Bienes Raíces, Inmobiliaria Bogotá, Apartamentos Norte Bogotá, Venta Inmuebles San Patricio, Estrato 6 Bogotá",
+    propertyId: "ID-BOG-SP01",
     ogUrl: "https://apto-san-patricio-bog.netlify.app/",
     ogImage: "https://raw.githubusercontent.com/Vecy-Bienes-Raices/Apto-San-Patricio-Bogota/main/assets/1.jpg",
     author: "Vecy Bienes Raíces", 
