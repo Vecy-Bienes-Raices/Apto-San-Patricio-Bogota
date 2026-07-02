@@ -99,7 +99,7 @@ const propertyConfig = {
         <p>Además, la alcoba principal cuenta con un <strong>walking closet y baño privado con tina</strong>.
         Con un depósito y 3 parqueaderos, este apartamento es una excelente opción. ¡Contáctanos para visitarlo y vivir el estilo de vida exclusivo de San Patricio!</p>
         <div style="margin-top: 30px; text-align: center;">
-            <a href="analisis.html" class="btn-analisis">
+            <a href="ficha-tecnica.html" class="btn-analisis">
                📋 VER MÁS DETALLES
             </a>
         </div>
